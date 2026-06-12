@@ -25,7 +25,7 @@
     <link id="pagestyle" href="{{ asset('/assets/css/soft-ui-dashboard.min.css?v=1.0.7') }}" rel="stylesheet" />
 
     {{-- SweetAlert CSS --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/sweetalert.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/sweetalert2.min.css') }}">
 </head>
 
 <body class="g-sidenav-show bg-gray-100">
@@ -71,7 +71,7 @@
     <script src="{{ asset('be/assets/js/soft-ui-dashboard.min.js?v=1.0.7') }}" defer></script>
 
     {{-- SweetAlert (lokal, 1 sumber saja) --}}
-    <script src="{{ asset('assets/js/plugins/sweetalert.js') }}" defer></script>
+    <script src="{{ asset('assets/js/plugins/sweetalert2.min.js') }}" defer></script>
 
     {{-- Inisialisasi scrollbar (Windows) --}}
     <script defer>
@@ -138,3 +138,5 @@
 
 </body>
 </html>
+
+
