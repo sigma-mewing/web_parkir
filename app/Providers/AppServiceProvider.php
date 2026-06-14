@@ -20,8 +20,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if (config('app.env') === 'production' || env('APP_URL') !== 'http://localhost') {
-            URL::forceScheme('https');
-        }
+        URL::forceScheme('https');
+        
+        Request::setTrustedProxies(
+            ['0.0.0.0/0', '2001:db8::/32'],
+            Request::HEADER_X_FORWARDED_FOR |
+            Request::HEADER_X_FORWARDED_HOST |
+            Request::HEADER_X_FORWARDED_PORT |
+            Request::HEADER_X_FORWARDED_PROTO |
+            Request::HEADER_X_FORWARDED_AWS_ELB
+        );
     }
 }
