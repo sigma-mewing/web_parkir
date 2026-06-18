@@ -32,5 +32,6 @@ class AppServiceProvider extends ServiceProvider
         // Force semua URL Laravel pakai https://
         if (env('FORCE_HTTPS', false)) {
             URL::forceScheme('https');
+        }
     }
 }
